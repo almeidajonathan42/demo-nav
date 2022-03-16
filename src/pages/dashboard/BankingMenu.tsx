@@ -5,33 +5,29 @@ import { Grid, Container, Stack, Box, List, ListItem, ListItemButton, ListItemTe
 
 export default function BankingMenu() {
     return (
-        <Box sx={{ position: 'fixed' }}>
+        <Box sx={{ position: 'fixed', top: '100px', left: '100px' }}>
             <List key={'bankingMenu'} sx={{ width: '200px' }}>
                 <ListItem disablePadding>
-                    <ListItemButton component="a" href="/dashboard/booking">
+                    <ListItemButton component="a" href="/dashboard/banking">
+                        <ListItemText primary="Main" />
+                    </ListItemButton>
+                </ListItem>
+
+                <ListItem disablePadding>
+                    <ListItemButton component="a" href="/dashboard/user/profile">
                         <ListItemText primary="Profile" />
                     </ListItemButton>
                 </ListItem>
 
                 <ListItem disablePadding>
-                    <ListItemButton component="a" href="/dashboard/booking">
-                        <ListItemText primary="Cards" />
-                    </ListItemButton>
-                </ListItem>
-
-                <ListSubheader component="div" id="nested-list-subheader">
-                    Sub group
-            </ListSubheader>
-
-                <ListItem disablePadding>
-                    <ListItemButton component="a" href="/dashboard/booking">
+                    <ListItemButton component="a" href="/dashboard/user/account">
                         <ListItemText primary="Account" />
                     </ListItemButton>
                 </ListItem>
 
                 <ListItem disablePadding>
-                    <ListItemButton component="a" href="/dashboard/booking">
-                        <ListItemText primary="Values" />
+                    <ListItemButton component="a" href="/dashboard/user/list">
+                        <ListItemText primary="User list" />
                     </ListItemButton>
                 </ListItem>
             </List>
